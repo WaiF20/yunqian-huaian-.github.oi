@@ -1,0 +1,618 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="云黔怀安殡仪馆民族礼仪定制服务 - 一民族一方案，一家庭一设计，提供苗族、侗族、布依族、彝族专属殡葬礼仪定制">
+    <title>民族礼仪定制服务 - 云黔怀安殡仪馆</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+/* 定制服务专属样式 */
+.custom-hero {
+    height: 65vh;
+    background: linear-gradient(135deg, rgba(32, 77, 69, 0.9), rgba(45, 107, 95, 0.8)), 
+                url('https://placehold.co/1920x900/2d6b5f/ffffff?text=民族礼仪定制服务') center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 85px;
+    color: white;
+    text-align: center;
+}
+
+.custom-hero h1 {
+    font-size: 56px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+
+.custom-hero p {
+    font-size: 22px;
+    opacity: 0.95;
+    letter-spacing: 2px;
+}
+
+.custom-tag {
+    display: inline-block;
+    background: rgba(255,255,255,0.2);
+    padding: 8px 25px;
+    border-radius: 30px;
+    margin: 30px 8px 0;
+    font-size: 15px;
+    backdrop-filter: blur(10px);
+}
+
+/* 6大定制服务 */
+.custom-service-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 35px;
+}
+
+.custom-service-card {
+    background: white;
+    border-radius: 24px;
+    padding: 50px 35px;
+    box-shadow: 0 8px 35px rgba(0,0,0,.06);
+    transition: .4s;
+    position: relative;
+    overflow: hidden;
+}
+
+.custom-service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(90deg, #2d6b5f, #8B7355);
+}
+
+.custom-service-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 20px 60px rgba(45, 107, 95, 0.18);
+}
+
+.custom-service-icon {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, #e9f1ee, #d8e4de);
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    margin-bottom: 25px;
+}
+
+.custom-service-card h3 {
+    font-size: 24px;
+    color: #204d45;
+    margin-bottom: 18px;
+}
+
+.custom-service-card p {
+    color: #666;
+    line-height: 1.9;
+    margin-bottom: 20px;
+}
+
+.custom-service-list {
+    list-style: none;
+}
+
+.custom-service-list li {
+    padding: 8px 0;
+    padding-left: 22px;
+    position: relative;
+    color: #555;
+    font-size: 15px;
+}
+
+.custom-service-list li::before {
+    content: '◆';
+    position: absolute;
+    left: 0;
+    color: #2d6b5f;
+    font-size: 12px;
+}
+
+/* 定制流程 */
+.custom-process {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.custom-process-step {
+    text-align: center;
+    position: relative;
+}
+
+.custom-process-number {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, #2d6b5f, #204d45);
+    border-radius: 50%;
+    color: white;
+    font-size: 28px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    box-shadow: 0 8px 25px rgba(45, 107, 95, 0.3);
+}
+
+.custom-process-step h4 {
+    font-size: 18px;
+    color: #204d45;
+    margin-bottom: 10px;
+}
+
+.custom-process-step p {
+    color: #777;
+    font-size: 14px;
+}
+
+.custom-process-line {
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(90deg, #2d6b5f, #8B7355);
+    margin: 0 20px;
+    position: relative;
+    top: -40px;
+}
+
+/* 民族选择 */
+.ethnic-select-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.ethnic-select-card {
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 8px 30px rgba(0,0,0,.1);
+    transition: .4s;
+}
+
+.ethnic-select-card:hover {
+    transform: translateY(-10px);
+}
+
+.ethnic-select-img {
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 48px;
+    font-weight: bold;
+}
+
+.ethnic-select-content {
+    background: white;
+    padding: 30px;
+}
+
+.ethnic-select-content h3 {
+    font-size: 22px;
+    color: #204d45;
+    margin-bottom: 15px;
+}
+
+.ethnic-select-content p {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.ethnic-features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.ethnic-feature-tag {
+    background: #e9f1ee;
+    color: #2d6b5f;
+    padding: 5px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+}
+
+/* CTA区域 */
+.custom-cta {
+    background: linear-gradient(135deg, #204d45, #2d6b5f);
+    padding: 90px 8%;
+    text-align: center;
+    color: white;
+    border-radius: 30px;
+    margin: 0 8%;
+}
+
+.custom-cta h2 {
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.custom-cta p {
+    font-size: 18px;
+    opacity: 0.9;
+    margin-bottom: 35px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.custom-cta-btn {
+    display: inline-block;
+    background: white;
+    color: #204d45;
+    padding: 18px 50px;
+    border-radius: 50px;
+    font-size: 18px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: .3s;
+}
+
+.custom-cta-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 40px rgba(0,0,0,.2);
+}
+
+.custom-cta-hotline {
+    margin-top: 25px;
+    font-size: 20px;
+    opacity: 0.85;
+}
+
+/* 优势 */
+.custom-advantage {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.custom-advantage-item {
+    text-align: center;
+    padding: 40px 30px;
+}
+
+.custom-advantage-icon {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.custom-advantage-item h4 {
+    font-size: 20px;
+    color: #204d45;
+    margin-bottom: 12px;
+}
+
+.custom-advantage-item p {
+    color: #777;
+}
+
+@media(max-width:1024px) {
+    .custom-service-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .ethnic-select-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .custom-process-line {
+        display: none;
+    }
+}
+
+@media(max-width:768px) {
+    .custom-hero h1 {
+        font-size: 38px;
+    }
+    .custom-service-grid,
+    .ethnic-select-grid,
+    .custom-advantage {
+        grid-template-columns: 1fr;
+    }
+    .custom-process {
+        flex-direction: column;
+        gap: 30px;
+    }
+}
+    </style>
+</head>
+<body>
+
+<!-- 导航栏 -->
+<header class="navbar">
+    <div class="logo">云黔怀安殡仪馆</div>
+    <nav class="nav-menu">
+        <a href="index.html">首页</a>
+        <a href="about.html">关于我们</a>
+        <a href="services.html">服务项目</a>
+        <a href="ethnic.html">民族特色服务</a>
+        <a href="custom.html" class="active">定制服务</a>
+        <a href="contact.html">联系我们</a>
+    </nav>
+    <a href="contact.html" class="nav-btn">在线预约</a>
+</header>
+
+<!-- Hero Banner -->
+<section class="custom-hero" style="background-image: url('img/banner19.png');background-position: center;background-blend-mode: overlay;">
+    <div>
+        <h1>民族礼仪定制服务</h1>
+        <p>一民族一方案 · 一家庭一设计</p>
+        <div>
+            <span class="custom-tag">苗族</span>
+            <span class="custom-tag">侗族</span>
+            <span class="custom-tag">布依族</span>
+            <span class="custom-tag">彝族</span>
+        </div>
+    </div>
+</section>
+
+<!-- 6大定制服务核心 -->
+<section class="section">
+    <div class="container">
+        <div class="section-title">
+            <h2>六大定制服务体系</h2>
+            <p>全方位民族礼仪专属定制，让每一次告别都承载文化的温度</p>
+        </div>
+        <div class="title-line"></div>
+        
+        <div class="custom-service-grid">
+            <div class="custom-service-card">
+                <img src="img/banner24.png" style="width:100%; height:180px; object-fit:cover; border-radius:12px; margin-bottom:25px;">
+                <div class="custom-service-icon">📜</div>
+                <h3>礼仪流程定制</h3>
+                <p>根据各民族传统习俗与信仰，量身设计专属告别仪式流程，尊重文化传统。</p>
+                <ul class="custom-service-list">
+                    <li>民族传统祭祀仪式设计</li>
+                    <li>传统司仪与长老主持</li>
+                    <li>祈福与送魂仪式安排</li>
+                    <li>按民族习俗定制时间节点</li>
+                </ul>
+            </div>
+            
+            <div class="custom-service-card">
+            
+                <a href=" ">
+                    <img src="img/banner25.png"
+                         style="width:100%; height:180px; object-fit:cover;
+                         border-radius:12px; margin-bottom:25px;">
+                </a >
+            
+                <div class="custom-service-icon">🏛</div>
+            
+                <h3>场景空间定制</h3>
+            
+                <p>以民族文化元素为主题，打造富有民族特色的告别空间与灵堂布置。</p >
+            
+                <a href="space-custom.html" class="detail-btn">
+                    查看详情 →
+                </a >
+            
+            </div>
+            
+            <div class="custom-service-card">
+				<img src="img/banner26.png" style="width:100%; height:180px; object-fit:cover; border-radius:12px; margin-bottom:25px;">
+                <div class="custom-service-icon">👘</div>
+                <h3>服饰礼器定制</h3>
+                <p>提供各民族传统服饰及专属礼仪用品，彰显民族文化特色。</p>
+                <ul class="custom-service-list">
+                    <li>民族传统寿衣定制</li>
+                    <li>传统刺绣与银饰装饰</li>
+                    <li>民族专属礼器配置</li>
+                    <li>传统丧葬用品配套</li>
+                </ul>
+            </div>
+            
+            <div class="custom-service-card">
+				<img src="img/banner27.png" style="width:100%; height:180px; object-fit:cover; border-radius:12px; margin-bottom:25px;">
+                <div class="custom-service-icon">🎵</div>
+                <h3>音乐文化定制</h3>
+                <p>精选民族传统音乐，营造庄重肃穆又富有文化内涵的告别氛围。</p>
+                <ul class="custom-service-list">
+                    <li>民族传统器乐演奏</li>
+                    <li>芦笙、侗族大歌等</li>
+                    <li>民族悼念音乐精选</li>
+                    <li>传统歌舞悼念仪式</li>
+                </ul>
+            </div>
+            
+            <div class="custom-service-card">
+				<img src="img/banner28.png" style="width:100%; height:180px; object-fit:cover; border-radius:12px; margin-bottom:25px;">
+                <div class="custom-service-icon">🎬</div>
+                <h3>纪念影像定制</h3>
+                <p>专业制作生平纪念视频，记录民族文化传承与生命故事。</p>
+                <ul class="custom-service-list">
+                    <li>生平故事纪录片制作</li>
+                    <li>民族文化纪实影像</li>
+                    <li>家庭珍贵影像剪辑</li>
+                    <li>高清摄影全程记录</li>
+                </ul>
+            </div>
+            
+            <div class="custom-service-card">
+				<img src="img/banner29.png" style="width:100%; height:180px; object-fit:cover; border-radius:12px; margin-bottom:25px;">
+                <div class="custom-service-icon">💝</div>
+                <h3>家属关怀服务</h3>
+                <p>专属礼仪顾问全程陪同，提供专业指导与情感关怀支持。</p>
+                <ul class="custom-service-list">
+                    <li>一对一专属礼仪顾问</li>
+                    <li>全程流程指导陪同</li>
+                    <li>家属情绪疏导关怀</li>
+                    <li>后续祭奠提醒服务</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 定制服务流程 -->
+<section class="section light-bg">
+    <div class="container">
+        <div class="section-title">
+            <h2>定制服务流程</h2>
+            <p>专属顾问全程跟进，四步完成专属民族礼仪定制</p>
+        </div>
+        <div class="title-line"></div>
+        
+        <div class="custom-process">
+            <div class="custom-process-step">
+                <div class="custom-process-number">1</div>
+                <h4>需求沟通</h4>
+                <p>了解民族背景<br>与家庭需求</p>
+            </div>
+            <div class="custom-process-line"></div>
+            <div class="custom-process-step">
+                <div class="custom-process-number">2</div>
+                <h4>方案制定</h4>
+                <p>设计专属<br>礼仪流程方案</p>
+            </div>
+            <div class="custom-process-line"></div>
+            <div class="custom-process-step">
+                <div class="custom-process-number">3</div>
+                <h4>场景布置</h4>
+                <p>民族文化元素<br>主题空间布置</p>
+            </div>
+            <div class="custom-process-line"></div>
+            <div class="custom-process-step">
+                <div class="custom-process-number">4</div>
+                <h4>礼仪执行</h4>
+                <p>专业团队<br>全程礼仪服务</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 支持定制民族 -->
+<section class="section">
+    <div class="container">
+        <div class="section-title">
+            <h2>支持定制民族</h2>
+            <p>根据各民族文化特色，设计专属礼仪方案</p>
+        </div>
+        <div class="title-line"></div>
+        
+        <div class="ethnic-select-grid">
+            <div class="ethnic-select-card">
+                <div class="ethnic-select-img" style="background: url('img/banner20.png') center/cover;"></div>
+                <div class="ethnic-select-content">
+                    <h3>苗族礼仪定制</h3>
+                    <p>苗绣文化、银饰元素、芦笙礼乐、开路祭祀传统仪式</p>
+                    <div class="ethnic-features">
+                        <span class="ethnic-feature-tag">苗绣布置</span>
+                        <span class="ethnic-feature-tag">银饰装饰</span>
+                        <span class="ethnic-feature-tag">芦笙礼乐</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="ethnic-select-card">
+                <div class="ethnic-select-img" style="background: url('img/banner21.png') center/cover;"></div>
+                <div class="ethnic-select-content">
+                    <h3>侗族礼仪定制</h3>
+                    <p>鼓楼文化、风雨桥意象、侗族大歌、传统丧葬礼仪</p>
+                    <div class="ethnic-features">
+                        <span class="ethnic-feature-tag">鼓楼文化</span>
+                        <span class="ethnic-feature-tag">侗族大歌</span>
+                        <span class="ethnic-feature-tag">寨老主持</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="ethnic-select-card">
+                <div class="ethnic-select-img" style="background: url('img/banner22.png') center/cover;"></div>
+                <div class="ethnic-select-content">
+                    <h3>布依族礼仪定制</h3>
+                    <p>蜡染文化、自然理念、八音坐唱、传统丧葬古规</p>
+                    <div class="ethnic-features">
+                        <span class="ethnic-feature-tag">蜡染装饰</span>
+                        <span class="ethnic-feature-tag">八音坐唱</span>
+                        <span class="ethnic-feature-tag">摩公主持</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="ethnic-select-card">
+                <div class="ethnic-select-img" style="background: url('img/banner23.png') center/cover;"></div>
+                <div class="ethnic-select-content">
+                    <h3>彝族礼仪定制</h3>
+                    <p>彝绣文化、火把意象、毕摩祭祀、传统送魂仪式</p>
+                    <div class="ethnic-features">
+                        <span class="ethnic-feature-tag">彝绣元素</span>
+                        <span class="ethnic-feature-tag">毕摩祭祀</span>
+                        <span class="ethnic-feature-tag">送魂仪式</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 四大优势 -->
+<section class="section light-bg">
+    <div class="container">
+        <div class="section-title">
+            <h2>为什么选择我们的定制服务</h2>
+            <p>专业、尊重、传承，让民族文化在告别中延续</p>
+        </div>
+        <div class="title-line"></div>
+        
+        <div class="custom-advantage">
+            <div class="custom-advantage-item">
+                <div class="custom-advantage-icon">🙏</div>
+                <h4>文化尊重</h4>
+                <p>深入研究各民族殡葬文化<br>充分尊重传统习俗</p>
+            </div>
+            <div class="custom-advantage-item">
+                <div class="custom-advantage-icon">👥</div>
+                <h4>专业团队</h4>
+                <p>熟悉民族礼仪的专业团队<br>专属顾问全程服务</p>
+            </div>
+            <div class="custom-advantage-item">
+                <div class="custom-advantage-icon">✏️</div>
+                <h4>一对一定制</h4>
+                <p>每个家庭专属方案<br>不套用标准化模板</p>
+            </div>
+            <div class="custom-advantage-item">
+                <div class="custom-advantage-icon">🤝</div>
+                <h4>全程陪伴</h4>
+                <p>从咨询到礼成全程陪同<br>后续关怀持续跟进</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA行动区 -->
+<section class="section">
+    <div class="custom-cta">
+        <h2>开启专属民族礼仪定制</h2>
+        <p>为每一个家庭提供更有温度、更具文化内涵的告别仪式<br>让生命的最后一程，承载民族文化的尊严与温度</p>
+        <a href="contact.html" class="custom-cta-btn">立即咨询定制</a>
+        <div class="custom-cta-hotline">24小时服务热线：400-XXX-XXXX</div>
+    </div>
+</section>
+
+<!-- 页脚 -->
+<footer>
+    <div class="footer-content">
+        <h3>云黔怀安殡仪馆</h3>
+        <p>尊重生命文化 · 传承民族记忆</p>
+        <p>© 2026 YunQian HuaiAn Funeral Service. All rights reserved.</p>
+    </div>
+</footer>
+
+</body>
+</html>

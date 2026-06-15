@@ -1,0 +1,880 @@
+/* ========= 全局 ========= */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:"Microsoft YaHei", "PingFang SC", sans-serif;
+    background:#f8f6f1;
+    color:#23352f;
+    line-height:1.8;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* ========= 容器 ========= */
+.section{
+    padding:90px 8%;
+}
+
+.light-bg{
+    background:#faf9f5;
+}
+
+.container {
+    max-width: 1360px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* ========= 导航 ========= */
+.navbar{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 22px 80px;
+    box-sizing: border-box;
+
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+
+    z-index: 999;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:700;
+    color:#204d45;
+    letter-spacing: 1px;
+}
+
+.nav-menu{
+    display:flex;
+    gap:40px;
+}
+
+.nav-menu a{
+    text-decoration:none;
+    color:#23352f;
+    font-size:16px;
+    font-weight:500;
+    transition:.3s;
+    position: relative;
+}
+
+.nav-menu a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #2d6b5f;
+    transition: .3s;
+}
+
+.nav-menu a:hover::after,
+.nav-menu a.active::after {
+    width: 100%;
+}
+
+.nav-menu a:hover{
+    color:#2d6b5f;
+}
+
+.nav-btn{
+
+    background:#2d6b5f;
+
+    color:white;
+
+    text-decoration:none;
+
+    padding:14px 30px;
+
+    border-radius:50px;
+
+    box-shadow:
+    0 8px 20px rgba(45,107,95,.25);
+
+    transition:.3s;
+}
+
+.nav-btn:hover{
+
+    transform:translateY(-2px);
+
+    background:#214e45;
+}
+
+/* ========= Hero轮播区 ========= */
+.hero{
+    position:relative;
+    height:100vh;
+    overflow:hidden;
+    margin-top:0;
+}
+
+.slide{
+    position:absolute;
+    width:100%;
+    height:100%;
+    opacity:0;
+    transition:opacity 1s ease;
+}
+
+.slide.active{
+    opacity:1;
+}
+
+.slide img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+/* 遮罩 */
+.slide::after{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,.35);
+}
+
+/* 内容 */
+.slide-content{
+    position:absolute;
+    top:42%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    z-index:10;
+    color:white;
+    max-width:650px;
+    text-align:center;
+}
+
+.slide-content h1{
+    font-size:64px;
+    margin-bottom:20px;
+    font-weight:700;
+    letter-spacing: 3px;
+    text-shadow: 0 3px 20px rgba(0,0,0,0.3);
+}
+
+.slide-content p{
+    font-size:24px;
+    margin-bottom:35px;
+    letter-spacing:1px;
+    opacity: 0.95;
+}
+
+.slide-btn{
+    display:inline-block;
+    text-decoration:none;
+    background:#2d6b5f;
+    color:white;
+    padding:16px 38px;
+    border-radius:50px;
+    transition:.3s;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.slide-btn:hover{
+    background:#214e45;
+    transform:translateY(-3px);
+    box-shadow: 0 8px 30px rgba(45, 107, 95, 0.4);
+}
+
+
+/* ========= 页面Banner ========= */
+.page-banner {
+    height: 500px;
+    background: linear-gradient(rgba(32, 77, 69, 0.85), rgba(32, 77, 69, 0.85)), 
+                url('https://placehold.co/1920x600/204d45/ffffff?text=云黔怀安殡仪馆') center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 85px;
+    color: white;
+    text-align: center;
+	position: relative;
+	overflow: hidden;
+}
+
+.page-banner h1 {
+    font-size: 48px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.page-banner p {
+    font-size: 18px;
+    opacity: 0.9;
+}
+
+/* ========= 标题 ========= */
+.section-title{
+    text-align:center;
+    margin-bottom:60px;
+}
+
+.section-title h2{
+    font-size:42px;
+    color:#204d45;
+    margin-bottom:15px;
+    letter-spacing: 2px;
+}
+
+.section-title p{
+    color:#777;
+    font-size: 17px;
+}
+
+.title-line {
+    width: 60px;
+    height: 3px;
+    background: #2d6b5f;
+    margin: 0 auto 50px;
+}
+
+/* ========= 民族服务 ========= */
+.ethnic-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:25px;
+}
+
+.ethnic-card{
+    height: 320px;
+    border-radius:20px;
+    overflow:hidden;
+    padding:40px 25px;
+    box-shadow: 0 10px 30px rgba(0,0,0,.08);
+    transition:.4s;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: relative;
+    color: white;
+}
+
+.ethnic-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(32, 77, 69, 0.9), rgba(32, 77, 69, 0.3), transparent);
+    z-index: 1;
+}
+
+.ethnic-card:hover{
+    transform:translateY(-10px);
+    box-shadow: 0 20px 50px rgba(0,0,0,.15);
+}
+
+.ethnic-card h3{
+    font-size:24px;
+    margin-bottom:12px;
+    position: relative;
+    z-index: 2;
+}
+
+.ethnic-card p{
+    opacity: 0.9;
+    position: relative;
+    z-index: 2;
+    font-size: 15px;
+}
+
+/* ========= 服务项目 ========= */
+.service-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.service-item{
+    background:white;
+    padding:45px 35px;
+    border-radius:18px;
+    text-align:center;
+    font-size:20px;
+    font-weight: 500;
+    box-shadow: 0 5px 20px rgba(0,0,0,.05);
+    transition:.3s;
+    color: #204d45;
+}
+
+.service-item:hover{
+    transform:translateY(-8px);
+    background: linear-gradient(135deg, #2d6b5f, #204d45);
+    color: white;
+    box-shadow: 0 15px 40px rgba(45, 107, 95, 0.25);
+}
+
+/* ========= 服务详情卡片 ========= */
+.service-detail-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.service-detail-card {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 5px 25px rgba(0,0,0,.06);
+    transition: .3s;
+}
+
+.service-detail-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0,0,0,.1);
+}
+
+.service-detail-card h3 {
+    font-size: 24px;
+    color: #204d45;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid rgba(45, 107, 95, 0.2);
+}
+
+.service-detail-card p {
+    color: #555;
+    margin-bottom: 15px;
+    line-height: 1.9;
+}
+
+.service-detail-card ul {
+    list-style: none;
+}
+
+.service-detail-card li {
+    padding: 8px 0;
+    padding-left: 25px;
+    position: relative;
+    color: #555;
+}
+
+.service-detail-card li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #2d6b5f;
+    font-weight: bold;
+}
+
+/* ========= 流程 ========= */
+.process{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.process div{
+    width:150px;
+    height:150px;
+    border-radius:50%;
+    background:#e9f1ee;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-weight:600;
+    color:#204d45;
+    text-align: center;
+    padding: 20px;
+    transition: .3s;
+    box-shadow: 0 5px 20px rgba(0,0,0,.05);
+}
+
+.process div:hover {
+    background: #2d6b5f;
+    color: white;
+    transform: scale(1.1);
+}
+
+.process span{
+    font-size:28px;
+    color:#2d6b5f;
+    font-weight: 300;
+}
+
+/* ========= 关于我们内容 ========= */
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.about-text h3 {
+    font-size: 32px;
+    color: #204d45;
+    margin-bottom: 25px;
+}
+
+.about-text p {
+    color: #555;
+    margin-bottom: 20px;
+    line-height: 2;
+    font-size: 17px;
+}
+
+.about-image {
+    height: 450px;
+    border-radius: 20px;
+    background: linear-gradient(135deg, #2d6b5f, #204d45);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 20px;
+    box-shadow: 0 20px 50px rgba(45, 107, 95, 0.3);
+}
+
+.advantage-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    margin-top: 60px;
+}
+
+.advantage-item {
+    text-align: center;
+    padding: 35px 25px;
+    background: white;
+    border-radius: 18px;
+    box-shadow: 0 5px 20px rgba(0,0,0,.05);
+    transition: .3s;
+}
+
+.advantage-item:hover {
+    transform: translateY(-8px);
+}
+
+.advantage-item h4 {
+    font-size: 20px;
+    color: #204d45;
+    margin-bottom: 12px;
+}
+
+.advantage-item p {
+    color: #777;
+    font-size: 15px;
+}
+
+/* ========= 图片画廊 ========= */
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.gallery-item{
+    height:250px;
+    border-radius:18px;
+    background: linear-gradient(135deg, #d8e4de, #b8cbc0);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:18px;
+    color:#204d45;
+    overflow:hidden;
+    transition:.4s;
+    font-weight: 500;
+}
+
+.gallery-item:hover{
+    transform:scale(1.05);
+    box-shadow: 0 15px 40px rgba(0,0,0,.15);
+}
+
+/* ========= 联系我们 ========= */
+.contact-container{
+    display:grid;
+    grid-template-columns:1fr 1.5fr;
+    gap:50px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.contact-info{
+    background:white;
+    padding:50px 40px;
+    border-radius:20px;
+    box-shadow: 0 5px 25px rgba(0,0,0,.06);
+}
+
+.contact-info h3 {
+    font-size: 26px;
+    color: #204d45;
+    margin-bottom: 30px;
+}
+
+.contact-info-item {
+    padding: 20px 0;
+    border-bottom: 1px solid #eee;
+    font-size: 17px;
+}
+
+.contact-info-item:last-child {
+    border-bottom: none;
+}
+
+.contact-info-item strong {
+    color: #204d45;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.contact-form{
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+}
+
+.contact-form input,
+.contact-form textarea{
+    padding:18px 22px;
+    border:none;
+    border-radius:12px;
+    background:white;
+    font-size: 16px;
+    font-family: inherit;
+    box-shadow: 0 3px 15px rgba(0,0,0,.05);
+    transition: .3s;
+    border: 2px solid transparent;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #2d6b5f;
+}
+
+.contact-form textarea{
+    height:160px;
+    resize:none;
+}
+
+.contact-form button{
+    border:none;
+    background:#2d6b5f;
+    color:white;
+    padding:18px;
+    border-radius:12px;
+    cursor:pointer;
+    transition:.3s;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.contact-form button:hover{
+    background:#214e45;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(45, 107, 95, 0.3);
+}
+
+/* ========= 页脚 ========= */
+footer{
+    background:#204d45;
+    color:white;
+    text-align:center;
+    padding:50px 20px 30px;
+}
+
+.footer-content h3{
+    font-size: 24px;
+    margin-bottom:12px;
+    letter-spacing: 1px;
+}
+
+.footer-content p:first-of-type {
+    color: rgba(255,255,255,0.7);
+    margin-bottom: 25px;
+}
+
+.footer-content p:last-of-type {
+    opacity: 0.5;
+    font-size: 14px;
+    padding-top: 25px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+/* ========= 手机端 ========= */
+@media(max-width:1024px) {
+    .ethnic-grid,
+    .advantage-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(max-width:768px){
+    .slide-content h1{
+        font-size:42px;
+    }
+    .slide-content p{
+        font-size:18px;
+    }
+    .nav-menu{
+        display:none;
+    }
+    .ethnic-grid,
+    .service-grid,
+    .gallery,
+    .contact-container,
+    .about-content,
+    .service-detail-grid,
+    .advantage-grid{
+        grid-template-columns:1fr;
+    }
+    .process{
+        flex-direction:column;
+    }
+    .process span {
+        transform: rotate(90deg);
+    }
+    .section-title h2 {
+        font-size: 32px;
+    }
+    .page-banner h1 {
+        font-size: 36px;
+    }
+}
+.service-image{
+    width:100%;
+    height:220px;
+    background:#f3f3f3;
+    border-radius:12px;
+    margin:20px 0;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:#999;
+    font-size:18px;
+    border:2px dashed #ddd;
+}
+.service-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    border-radius:12px;
+}
+/* 生命文化园容器布局 */
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-top: 30px;
+}
+
+/* 每个卡片通用样式 */
+.gallery-item {
+    height: 220px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* 文字居底部居中 */
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 12px 0;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 8px;
+   
+}
+
+/* 鼠标悬浮轻微放大 */
+.gallery-item:hover {
+    transform: scale(1.03);
+}
+
+/* 第1个：馆区全景 单独配图 */
+.gallery-item:nth-child(1) {
+    background-image: url('../img/banner12.jpg');
+}
+/* 第2个：告别大厅 单独配图 */
+.gallery-item:nth-child(2) {
+    background-image: url('../img/banner13.png');
+}
+/* 第3个：园林景观 单独配图 */
+.gallery-item:nth-child(3) {
+    background-image: url('../img/banner14.png');
+}
+/* 第4个：休息区域 单独配图 */
+.gallery-item:nth-child(4) {
+    background-image: url('../img/banner15.png');
+}
+.advantage-item{
+    text-decoration:none;
+    color:inherit;
+    display:block;
+    transition:.3s;
+}
+
+.advantage-item:hover{
+    transform:translateY(-8px);
+    box-shadow:0 15px 40px rgba(0,0,0,.08);
+}
+.process-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:25px;
+    margin-top:50px;
+}
+
+.process-card{
+    background:#fff;
+    padding:35px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 10px 30px rgba(0,0,0,.05);
+}
+
+.process-card span{
+    display:inline-block;
+    width:60px;
+    height:60px;
+    line-height:60px;
+    border-radius:50%;
+    background:#2d6b5f;
+    color:#fff;
+    font-weight:700;
+    margin-bottom:20px;
+}
+
+.custom-contact{
+    text-align:center;
+    background:#f7f9fa;
+    padding:80px;
+    border-radius:25px;
+}
+.advantage-item{
+    text-decoration:none;
+    color:inherit;
+    display:block;
+}
+
+.advantage-item:hover{
+    transform:translateY(-5px);
+    transition:.3s;
+}
+.nation-grid,
+.service-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+margin-top:40px;
+}
+
+.nation-card,
+.service-card{
+background:#fff;
+padding:35px 25px;
+border-radius:16px;
+text-align:center;
+box-shadow:0 5px 20px rgba(0,0,0,.08);
+transition:.3s;
+}
+
+.nation-card:hover,
+.service-card:hover{
+transform:translateY(-8px);
+}
+
+.flow{
+display:flex;
+justify-content:space-between;
+gap:15px;
+margin-top:50px;
+flex-wrap:wrap;
+}
+
+.flow-item{
+flex:1;
+min-width:180px;
+background:#2d6b5f;
+color:#fff;
+text-align:center;
+padding:25px;
+border-radius:12px;
+font-weight:600;
+}
+
+.custom-form{
+max-width:700px;
+margin:40px auto 0;
+display:flex;
+flex-direction:column;
+gap:20px;
+}
+
+.custom-form input,
+.custom-form select,
+.custom-form textarea{
+padding:15px;
+border:1px solid #ddd;
+border-radius:10px;
+font-size:16px;
+}
+
+.custom-form textarea{
+height:150px;
+resize:none;
+}
+
+.custom-form button{
+background:#2d6b5f;
+color:white;
+border:none;
+padding:16px;
+border-radius:50px;
+cursor:pointer;
+font-size:18px;
+}
+
+.custom-form button:hover{
+background:#214e45;
+}
