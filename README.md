@@ -1,23 +1,15 @@
 # 云谦怀安.GitHub.io
-静态殡葬服务展示官网，配套Gitee同步仓库。
+殡仪馆人文静态展示官网，原生HTML+CSS+JS开发，融合多民族丧葬礼仪展示。
 
-## 仓库地址
-Gitee：https://gitee.com/jiuyu-fang/yunqian-huaian
+## 🖥️ 在线网站预览（点击直接访问完整网页）
+### 1. GitHub Pages 正式站点（完整样式，推荐）
+[点击访问云谦怀安官网](https://waif20.github.io/yunqian-huaian-.github.io/)
 
-## 项目文件
-- index.html 首页
-- about.html 馆所介绍
-- contact.html 联系页面
-- ethnic.html 少数民族礼俗
-- services.html 服务套餐
-- custom-service.html 定制服务
-- space-custom.html 场馆空间
-- CSS/ 样式文件夹
-- JS/ 交互脚本
-- 图片/ 网站素材
+### 2. 备用HTML在线预览（未部署Pages时可用）
+[备用预览链接](https://htmlpreview.github.io/?https://github.com/WaiF20/yunqian-huaian-.github.io/blob/main/index.html)
 
-## 本地预览
-直接打开 index.html 即可，纯静态页面无需服务端。
+## 📦 仓库地址
+- GitHub 当前仓库：https://github.com/WaiF20/yunqian-huaian-.github.io
+- Gitee 同步仓库：https://gitee.com/jiuyu-fang/yunqian-huaian
 
-## 部署
-本仓库用于 GitHub Pages 线上部署。
+## 📂 项目文件结构
