@@ -1,1 +1,12 @@
-# https://gitee.com/jiuyu-fang/yunqian-huaian
+# 云谦怀安 - 殡仪馆人文服务官网
+云黔怀安殡仪馆现代化线上展示官网，融合多民族丧葬礼俗，风格温暖人文，摒弃阴森传统殡葬视觉。
+
+## 项目地址
+- Gitee 主仓库：https://gitee.com/jiuyu-fang/yunqian-huaian
+- GitHub 镜像：https://github.com/WaiF20/yunqian-huaian-.github.io
+
+## 项目介绍
+本项目为静态单页殡葬服务展示网站，面向有丧葬需求的群众，提供线上服务介绍、民族特色礼俗、客服咨询、场馆空间展示等功能；
+视觉设计主打柔和温暖色调，兼容苗族、侗族、布依族、彝族等少数民族传统殡葬礼仪展示，弱化沉重压抑感，传递人文关怀。
+
+## 文件目录说明
